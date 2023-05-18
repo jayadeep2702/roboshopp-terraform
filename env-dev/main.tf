@@ -44,4 +44,4 @@ components = {
   }
 }
 
-variable "env" {}
+env = "dev"

@@ -43,4 +43,4 @@ components = {
   }
 }
 
-variable "env" {}
+env = "prod"
