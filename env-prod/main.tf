@@ -42,3 +42,5 @@ components = {
     }
   }
 }
+
+variable "env" {}
