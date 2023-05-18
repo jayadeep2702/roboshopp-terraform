@@ -1,5 +1,4 @@
 
-
 resource "aws_instance" "instance" {
   for_each = var.components
   ami      = "ami-0b5a2b5b8f2be4ec2"
