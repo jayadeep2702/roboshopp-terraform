@@ -6,3 +6,7 @@ resource "aws_instance" "frontend" {
     Name = "HelloWorld"
   }
 }
+
+output "aws_instance" {
+  value = aws_instance.frontend.public_ip
+}
