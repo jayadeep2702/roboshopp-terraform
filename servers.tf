@@ -234,5 +234,5 @@ resource "aws_route53_record" "payment" {
   type    = "A"
   ttl     = 300
   records = [aws_instance.payment.private_ip]
-*//*
+*/
 
