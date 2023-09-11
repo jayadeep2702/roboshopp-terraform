@@ -1,4 +1,3 @@
-
 resource "aws_instance" "instance" {
   for_each      = var.components
   ami           = data.aws_ami.centos.image_id
@@ -8,7 +7,24 @@ resource "aws_instance" "instance" {
   tags = {
     Name = each.value["name"]
   }
-}
+  provisioner "remote-exec" {
+    connection {
+    type     = "ssh"
+    user     = "centos"
+    password = "DevOps321"
+    host     = self.private_ip
+    }
+
+    inline = [
+    "rm -rf roboshopp-terraform",
+    "git clone https://github.com/jayadeep2702/roboshopp-terraform.git",
+    "cd roboshopp-terraform",
+    "sudo bash ${each.value["name"]}.sh"
+    ]
+    }
+  }
+
+
 
 
 resource "aws_route53_record" "records" {
