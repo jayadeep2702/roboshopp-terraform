@@ -27,7 +27,7 @@ components = {
   mysql = {
     name          = "mysql"
     instance_type = "t3.small"
-    password = "roboshop@1"
+    password = "Roboshop@1"
   }
   rabbitmq = {
     name          = "rabbitmq"
@@ -37,7 +37,7 @@ components = {
   shipping = {
     name          = "shipping"
     instance_type = "t3.small"
-    password = "roboshop@1"
+    password = "Roboshop@1"
   }
   payment = {
     name          = "payment"
