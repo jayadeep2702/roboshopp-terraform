@@ -5,7 +5,7 @@ components = {
     instance_type = "t3.small"
   }
   mongodb = {
-    name          = "mongodb"
+    name          = "mongo"
     instance_type = "t3.small"
   }
   catalogue = {
