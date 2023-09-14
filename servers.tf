@@ -33,7 +33,7 @@ resource "null_resource" "provisioner" {
 
 resource "aws_route53_record" "records" {
   for_each = var.components
-  zone_id = "Z02359642VV81PVIOF0ZQ"
+  zone_id = "Z05101383TRG2EDZQVJHC"
   name    = "${each.value["name"]}-dev.jdevops72.online"
   type    = "A"
   ttl     = 300
