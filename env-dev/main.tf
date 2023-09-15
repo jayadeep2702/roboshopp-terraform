@@ -4,10 +4,7 @@ components = {
     name          = "frontend"
     instance_type = "t3.small"
   }
-  mongodb = {
-    name          = "mongodb"
-    instance_type = "t3.small"
-  }
+
   catalogue = {
     name          = "catalogue"
     instance_type = "t3.small"
@@ -18,6 +15,27 @@ components = {
   }
   user = {
     name          = "user"
+    instance_type = "t3.small"
+  }
+
+  shipping = {
+    name          = "shipping"
+    instance_type = "t3.small"
+    password = "Roboshop@1"
+  }
+  payment = {
+    name          = "payment"
+    instance_type = "t3.small"
+    password = "roboshop123"
+
+  }
+}
+
+env ="dev"
+
+database_servers ={
+  mongodb = {
+    name          = "mongodb"
     instance_type = "t3.small"
   }
   redis = {
@@ -34,17 +52,4 @@ components = {
     instance_type = "t3.small"
     password = "roboshop123"
   }
-  shipping = {
-    name          = "shipping"
-    instance_type = "t3.small"
-    password = "Roboshop@1"
-  }
-  payment = {
-    name          = "payment"
-    instance_type = "t3.small"
-    password = "roboshop123"
-
-  }
 }
-
-env ="dev"
