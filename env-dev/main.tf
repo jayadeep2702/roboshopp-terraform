@@ -1,4 +1,4 @@
-components = {
+app_servers = {
 
   frontend = {
     name          = "frontend"
