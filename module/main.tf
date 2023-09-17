@@ -4,7 +4,7 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids = [ data.aws_security_group.allow-all.id ]
 
   tags = {
-    Name = var.components_name
+    Name = var.env != "" ? "${var.components_name}-${var.env}" : var.components_name
   }
 }
 
