@@ -5,3 +5,5 @@ variable "password" {}
 variable "provisioner" {
   default = false
 }
+variable "app_type" {}
+variable "db_type" {}
