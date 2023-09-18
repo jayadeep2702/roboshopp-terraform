@@ -54,3 +54,32 @@ resource "aws_iam_role" "role" {
     tag-key = "${var.components_name}-${var.env}-role"
   }
 }
+resource "aws_iam_role_policy" "ssm-ps-policy" {
+  name = "test_policy"
+  role = aws_iam_role.role.id
+
+  # Terraform's "jsonencode" function converts a
+  # Terraform expression result to valid JSON syntax.
+  policy = jsonencode({
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "VisualEditor0",
+        "Effect": "Allow",
+        "Action": [
+          "ssm:GetParameterHistory",
+          "ssm:GetParametersByPath",
+          "ssm:GetParameters",
+          "ssm:GetParameter"
+        ],
+        "Resource": "arn:aws:ssm:us-east-1:715770457265:parameter/${var.env}.${var.components_name}.*"
+      },
+      {
+        "Sid": "VisualEditor1",
+        "Effect": "Allow",
+        "Action": "ssm:DescribeParameters",
+        "Resource": "*"
+      }
+    ]
+  })
+}
