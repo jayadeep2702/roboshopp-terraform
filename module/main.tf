@@ -86,12 +86,7 @@ resource "aws_iam_role_policy" "ssm-ps-policy" {
           "arn:aws:kms:us-east-1:777731535285:key/arn:aws:kms:us-east-1:777731535285:key/48360b24-632a-4115-bcba-aabd1fb96050"
         ]
       },
-      {
-        "Sid": "VisualEditor1",
-        "Effect": "Allow",
-        "Action": "ssm:DescribeParameters",
-        "Resource": "*"
-      }
+
     ]
   })
 }
