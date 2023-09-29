@@ -18,5 +18,5 @@ module "app-servers" {
   instance_type = each.value["instance_type"]
   password = lookup(each.value,"password","null")
   provisioner = true
-  app_type = "app "
+  app_type = "app"
 }
