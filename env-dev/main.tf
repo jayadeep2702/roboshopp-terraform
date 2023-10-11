@@ -27,13 +27,13 @@ vpc = {
   }
 }
 
-app {
-  frontend {
+app = {
+  frontend = {
     name = "frontend"
     instance_type = "t3.small"
     subnet_name = "web"
   }
-  catalogue {
+  catalogue = {
     name = "catalogue"
     instance_type = "t3.small"
     subnet_name = "app"
