@@ -47,24 +47,5 @@ app = {
     min_size = 2
     allow_app_cidr = "web"
   }
-  user = {
-    name = "user"
-    instance_type = "t3.small"
-    subnet_name = "app"
-  }
-  cart = {
-    name = "cart"
-    instance_type = "t3.small"
-    subnet_name = "app"
-  }
-  shipping = {
-    name = "shipping"
-    instance_type = "t3.small"
-    subnet_name = "app"
-  }
-  payment = {
-    name = "payment"
-    instance_type = "t3.small"
-    subnet_name = "app"
-  }
+
 }
