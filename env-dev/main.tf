@@ -66,7 +66,7 @@ docdb = {
   }
 }
 
-docdb = {
+rds = {
   main = {
     subnet_name = "db"
     allow_db_cidr = "app"
