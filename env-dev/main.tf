@@ -58,7 +58,7 @@ app = {
 
 docdb = {
   main = {
-    subent_name = "db"
+    subnet_name = "db"
     allow_db_cidr = "app"
     engine_version = "4.0.0"
   }
