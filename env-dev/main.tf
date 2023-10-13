@@ -3,7 +3,7 @@ bastion_cidr = ["172.31.16.117/32"]
 default_vpc_id = "vpc-0991476a25c58462f"
 default_vpc_cidr = "172.31.0.0/16"
 default_vpc_rtid = "rtb-0a6050a242e846a59"
-
+kms_arn = "arn:aws:kms:us-east-1:777731535285:key/48360b24-632a-4115-bcba-aabd1fb96050"
 vpc = {
   main = {
     cidr_block = "10.0.0.0/16"
