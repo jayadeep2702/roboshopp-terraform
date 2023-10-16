@@ -20,7 +20,7 @@ module "docdb" {
   engine_version = each.value["engine_version"]
   instance_count = each.value["instance_count"]
   instance_class = each.value["instance_class"]
-  app_port       = each.value["app_port"]
+
 
 
   tags = local.tags
@@ -112,6 +112,7 @@ module "app" {
   subnet_ids =lookup(lookup(lookup(lookup(module.vpc,"main", null ), "subnets", null), each.value["subnet_name"], null), "subnet_ids", null)
   vpc_id = lookup(lookup(module.vpc,"main", null ), "vpc_id", null)
   allow_app_cidr = lookup(lookup(lookup(lookup(module.vpc,"main", null ), "subnets", null), each.value["allow_app_cidr"], null), "subnet_cidrs", null)
+  app_port       = each.value["app_port"]
 
   env = var.env
   bastion_cidr = var.bastion_cidr
