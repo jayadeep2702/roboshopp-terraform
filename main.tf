@@ -20,6 +20,7 @@ module "docdb" {
   engine_version = each.value["engine_version"]
   instance_count = each.value["instance_count"]
   instance_class = each.value["instance_class"]
+  app_port       = each.value["app_port"]
 
 
   tags = local.tags
@@ -115,8 +116,5 @@ module "app" {
   env = var.env
   bastion_cidr = var.bastion_cidr
   tags = local.tags
-
-
-
 
 }
