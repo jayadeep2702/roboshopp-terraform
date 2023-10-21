@@ -64,7 +64,7 @@ app = {
   }
 
   cart = {
-    name = "catalogue"
+    name = "cart"
     instance_type = "t3.small"
     subnet_name = "app"
     desired_capacity = 1
@@ -78,7 +78,7 @@ app = {
   }
 
   user = {
-    name = "catalogue"
+    name = "user"
     instance_type = "t3.small"
     subnet_name = "app"
     desired_capacity = 1
@@ -92,7 +92,7 @@ app = {
   }
 
   shipping = {
-    name = "catalogue"
+    name = "shipping"
     instance_type = "t3.small"
     subnet_name = "app"
     desired_capacity = 1
@@ -106,7 +106,7 @@ app = {
   }
 
   payment = {
-    name = "catalogue"
+    name = "payment"
     instance_type = "t3.small"
     subnet_name = "app"
     desired_capacity = 1
