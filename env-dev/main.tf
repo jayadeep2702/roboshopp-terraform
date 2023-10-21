@@ -63,6 +63,62 @@ app = {
     parameters = ["docdb"]
   }
 
+  cart = {
+    name = "catalogue"
+    instance_type = "t3.small"
+    subnet_name = "app"
+    desired_capacity = 1
+    max_size = 10
+    min_size = 1
+    allow_app_cidr = "app"
+    app_port = 8080
+    listener_priority = 2
+    lb_type = "private"
+    parameters = []
+  }
+
+  user = {
+    name = "catalogue"
+    instance_type = "t3.small"
+    subnet_name = "app"
+    desired_capacity = 1
+    max_size = 10
+    min_size = 1
+    allow_app_cidr = "app"
+    app_port = 8080
+    listener_priority = 3
+    lb_type = "private"
+    parameters = ["docdb"]
+  }
+
+  shipping = {
+    name = "catalogue"
+    instance_type = "t3.small"
+    subnet_name = "app"
+    desired_capacity = 1
+    max_size = 10
+    min_size = 1
+    allow_app_cidr = "app"
+    app_port = 8080
+    listener_priority = 4
+    lb_type = "private"
+    parameters = ["rds"]
+  }
+
+  payment = {
+    name = "catalogue"
+    instance_type = "t3.small"
+    subnet_name = "app"
+    desired_capacity = 1
+    max_size = 10
+    min_size = 1
+    allow_app_cidr = "app"
+    app_port = 8080
+    listener_priority = 5
+    lb_type = "private"
+    parameters = []
+  }
+
 }
 
 
