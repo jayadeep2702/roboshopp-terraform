@@ -23,11 +23,13 @@ pipeline {
           sh 'terraform apply -auto-approve -var-file=env-${env}/main.tf'
         }
       }
-   }
  }
+
 
 post {
   always {
     cleanWS()
   }
+}
+
 }
