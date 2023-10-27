@@ -18,7 +18,7 @@ pipeline {
    }
    stage ('TERRAFROM APPLY') {
         steps {
-          sh 'terraform apply -auto-approve -var-file=env-${env}/main.tfavrs
+          sh 'terraform apply -auto-approve -var-file=env-${env}/main.tfavrs'
         }
       }
  }
