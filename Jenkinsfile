@@ -12,13 +12,13 @@ pipeline {
 
  stages {
 
-   stage ('TERRAFROM INIT') {
+   stage ('TERRAFORM INIT') {
      steps {
        sh 'terraform init -backend-config=env-${env}/state.tfvars'
      }
    }
 
-   stage ('TERRAFROM APPLY') {
+   stage ('TERRAFORM APPLY') {
         steps {
           sh 'terraform apply -auto-approve -var-file=env-${env}/main.tf'
         }
