@@ -1,11 +1,11 @@
 env = "dev"
 bastion_cidr = ["172.31.92.97/32"]
-default_vpc_id = "vpc-01f2efae15fe69376"
+default_vpc_id = "vpc-011ad40842dcb9fc1"
 default_vpc_cidr = "172.31.0.0/16"
-default_vpc_rtid = "rtb-02326211b2afbe5f4"
-kms_arn = "arn:aws:kms:us-east-1:330295742572:key/ec584eae-a1bf-4381-89c4-e642a25d5c18"
+default_vpc_rtid = "rtb-05515a3e79db5ba59"
+kms_arn = "arn:aws:kms:us-east-1:710990938946:key/b71acc0d-7a78-471a-abb2-6aad1d5d57da"
 domain_name      = "jdevops72.online"
-domain_id        = "Z0672413LWWEOCOWAU9B"
+domain_id        = "Z02224123P5DM5IQK875D"
 vpc = {
   main = {
     cidr_block = "10.0.0.0/16"
