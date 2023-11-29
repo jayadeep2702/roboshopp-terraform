@@ -1,5 +1,5 @@
 env = "dev"
-bastion_cidr = ["172.31.92.97/32"]
+bastion_cidr = ["172.31.42.224/32"]
 default_vpc_id = "vpc-011ad40842dcb9fc1"
 default_vpc_cidr = "172.31.0.0/16"
 default_vpc_rtid = "rtb-05515a3e79db5ba59"
