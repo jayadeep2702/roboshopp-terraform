@@ -22,7 +22,6 @@ module "docdb" {
   instance_class = each.value["instance_class"]
 
 
-
   tags = local.tags
   env = var.env
   vpc_id = local.vpc_id
