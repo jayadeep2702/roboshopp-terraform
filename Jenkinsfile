@@ -1,35 +1,41 @@
 pipeline {
-  agent {
-    node {
-     label 'workstation'
+
+    agent {
+        node {
+            label 'workstation'
+        }
+    }
+
+    options {
+        ansiColor('xterm')
+    }
+
+    parameters {
+        choice(name: 'env', choices: ['dev', 'prod'], description: 'Pick environment')
+        choice(name: 'action', choices: ['apply', 'destroy'], description: 'Pick Action')
+    }
+
+    stages {
+        stage('Terraform INIT') {
+            steps {
+                sh 'terraform init -backend-config=env-${env}/state.tfvars'
+            }
+        }
+
+        stage('Terraform Apply') {
+
+            steps {
+                sh 'terraform ${action} -auto-approve -var-file=env-${env}/main.tf'
+            }
+        }
 
     }
-  }
 
- parameters{
-   choice(name: 'env', choices: ['dev','prod'], description: 'pick environment')
- }
-
- stages {
-
-   stage ('TERRAFROM INIT') {
-     steps {
-       sh 'terraform init -backend-config=env-${env}/state.tfvars'
-     }
-   }
-
-   stage ('TERRAFROM APPLY') {
-        steps {
-          sh 'terraform apply -auto-approve -var-file=env-${env}/main.tf'
+    post {
+        always {
+            cleanWs()
         }
-      }
- }
-
-
-post {
-  always {
-    cleanWS()
-  }
-}
+    }
 
 }
+
